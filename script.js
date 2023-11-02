@@ -53,7 +53,7 @@ else if(data.weather[0].main == "Mist"){
 }
 
 weatherState.innerHTML = data.weather[0].description;
-document.querySelector(".weatherIcon").src.innerHTML = weatherIcon.src;
+weatherIcon.innerHTML  = weatherIcon.src;
 
 document.querySelector(".weather").style.display = "block";
 document.querySelector(".error").style.display = "none";
