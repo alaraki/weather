@@ -7,14 +7,14 @@ apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
 
 const searchBox = document.querySelector(".search input");
 const searchBtn = document.querySelector(".search button");
-const weatherIcon = document.querySelector(".weather-icon");
+const weatherIcon = document.querySelector(".weathericon");
 const weatherState = document.querySelector(".state");
 
 async function checkWeather(city) {
 
 const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
 
-console.log(response.status);
+//console.log(response.status);
 
 if(response.status == 404) {
   document.querySelector(".error").style.display = "block";
@@ -28,26 +28,32 @@ document.querySelector(".temp").innerHTML = Math.round(data.main.temp)  + "°c";
 document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
 document.querySelector(".wind").innerHTML = data.wind.speed + " km/h";
 
+//console.log(data);
+
 if(data.weather[0].main == "Clouds") {
   weatherIcon.src = "Images/Clouds.png";
-  weatherState.innerHTML = "Clouds";
+  // weatherState.innerHTML = "Clouds";
+
 }
 else if(data.weather[0].main == "Clear"){
   weatherIcon.src = "Images/Clear.png";
-  weatherState.innerHTML = "Clear";
+  // weatherState.innerHTML = "Clear";
 }
 else if(data.weather[0].main == "Rain"){
   weatherIcon.src = "Images/Rain.png";
-  weatherState.innerHTML = "Rain";
+  // weatherState.innerHTML = "Rain";
 }
 else if(data.weather[0].main == "Drizzle"){
   weatherIcon.src = "Images/Drizzle.png";
-  weatherState.innerHTML = "Drizzle";
+  // weatherState.innerHTML = "Drizzle";
 }
 else if(data.weather[0].main == "Mist"){
   weatherIcon.src = "Images/Mist.png";
-  weatherState.innerHTML = "Mist";
+  // weatherState.innerHTML = "Mist";
 }
+
+weatherState.innerHTML = data.weather[0].description;
+document.querySelector(".weatherIcon").src.innerHTML = weatherIcon.src;
 
 document.querySelector(".weather").style.display = "block";
 document.querySelector(".error").style.display = "none";
