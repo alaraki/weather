@@ -31,7 +31,7 @@ document.querySelector(".wind").innerHTML = data.wind.speed + " km/h";
 //console.log(data);
 
 if(data.weather[0].main == "Clouds") {
-  weatherIcon.src = "images/clouds.png";
+  weatherIcon.src = "Images/clouds.png";
   // weatherState.innerHTML = "Clouds";
 
 }
