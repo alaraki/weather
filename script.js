@@ -31,24 +31,24 @@ document.querySelector(".wind").innerHTML = data.wind.speed + " km/h";
 //console.log(data);
 
 if(data.weather[0].main == "Clouds") {
-  weatherIcon.src = "Images/clouds.png";
+  weatherIcon.src = "clouds.png";
   // weatherState.innerHTML = "Clouds";
 
 }
 else if(data.weather[0].main == "Clear"){
-  weatherIcon.src = "Images/clear.png";
+  weatherIcon.src = "clear.png";
   // weatherState.innerHTML = "Clear";
 }
 else if(data.weather[0].main == "Rain"){
-  weatherIcon.src = "Images/rain.png";
+  weatherIcon.src = "rain.png";
   // weatherState.innerHTML = "Rain";
 }
 else if(data.weather[0].main == "Drizzle"){
-  weatherIcon.src = "Images/drizzle.png";
+  weatherIcon.src = "drizzle.png";
   // weatherState.innerHTML = "Drizzle";
 }
 else if(data.weather[0].main == "Mist"){
-  weatherIcon.src = "Images/mist.png";
+  weatherIcon.src = "mist.png";
   // weatherState.innerHTML = "Mist";
 }
 
