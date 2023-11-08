@@ -34,11 +34,11 @@ body {
   outline: 0;
   background: #ebfffc;
   color: #555;
-  padding: 10px 25px;
+  padding: 5px 5px;
   height: 60px;
   border-radius: 30px;
   flex: 1;
-  margin-right: 16px;
+  margin-right: 5px;
   font-size: 18px;
 }
 
